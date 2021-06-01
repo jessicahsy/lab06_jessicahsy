@@ -17,6 +17,7 @@ void Heap::push(int value){
         break;
       }else if (i==vdata.size()-1){
         vdata.push_back(value);
+        break;
       }
     }
   }
@@ -39,5 +40,9 @@ int Heap::top(){
 bool Heap::empty(){
   if (vdata.size()==0)return true;
   return false;
+}
+
+int Heap::size(){
+  return vdata.size();
 }
     

@@ -17,7 +17,6 @@ int main(int argc, char *argv[]) {
     
     }
     int t = atoi(argv[1]);
-    //cout<<"t: "<<t<<(t==1)<<endl;
     std::priority_queue<int, std::vector<int>, std::greater<int>> data;
     Heap h;
     int numvals = 3;
@@ -67,10 +66,11 @@ int main(int argc, char *argv[]) {
             int arand = rand() % 2000;
             data.push(arand);
             h.push(arand);
+            //cout<<"Here:  "<<i<<"; "<<h.size()<<"  "<<data.size()<<endl<<endl;
     }
+    //cout<<" size "<<h.size()<<"   "<<data.size()<<endl;
     while(!data.empty()){
         assert(!h.empty());
-        cout<<data.top()<<"-"<<h.top()<<" ";
         assert(data.top()==h.top());
         data.pop();
         h.pop();

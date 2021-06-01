@@ -14,3 +14,4 @@ examheap.o: examheap.cpp
 
 clean:
 	rm -f examheap *.o
+	
